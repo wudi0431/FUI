@@ -3,7 +3,7 @@ require.config({
     paths: {
         base: '../src/core/base',
         attribute: '../src/core/attribute',
-        FFF: '../src/core/FFF',
+        FUI: 'core/FUI',
         zepto: '../src/lib/zepto',
         language: '../src/core/language',
         eventEmitter: '../src/core/eventEmitter',

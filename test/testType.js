@@ -2,7 +2,7 @@
  * Created by toms on 15/3/20.
  */
 
-require(['FFF'], function(FFF) {
+require(['../src/core/FUI.js'], function(FFF) {
     var F = FFF.FFF;
 
     var typeobj = ['1','true','test',[],{'name':'test'},1,1.2,false,undefined,null,NaN,function(){},new Date(),/^h/,new Error()]; 

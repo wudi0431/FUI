@@ -7,12 +7,12 @@ define(['base', 'language', 'widget'], function (base, language, widget) {
 
     var VERSION = '0.1.2';
 
-    function FFF() {
+    function FUI() {
         this.version = VERSION;
         Base.apply(this, arguments);
     }
 
-    FFF.STATICS = {
+    FUI.STATICS = {
         Language: L,
         Base: Base,
         Widget: Widget
@@ -20,16 +20,16 @@ define(['base', 'language', 'widget'], function (base, language, widget) {
 
 
     //让FFF拥有Language类的static方法
-    L.mix(FFF.prototype, L);
+    L.mix(FUI.prototype, L);
 
-    L.extend(FFF, Base, FFF.STATICS);
+    L.extend(FUI, Base, FUI.STATICS);
 
-    var F = new FFF();
+    var F = new FUI();
 
-    window.FFF = F;
+    window.FUI = F;
 
     return {
-        FFF: F
+        FUI: F
     };
 
 });

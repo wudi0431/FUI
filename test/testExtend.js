@@ -2,7 +2,7 @@
  * Created by toms on 15/3/20.
  */
 
-require(['FFF'], function(FFF) {
+require(['../src/core/FUI.js'], function(FFF) {
     var F = FFF.FFF;
 
      function ParentCalss(){
@@ -51,7 +51,7 @@ require(['FFF'], function(FFF) {
 
 });
 
-define('parentClass',['FFF'],function(FFF){
+define('parentClass',['../src/core/FUI.js'],function(FFF){
 	var F = FFF.FFF,
         Widget = F.Widget;
 
@@ -83,7 +83,7 @@ define('parentClass',['FFF'],function(FFF){
 });
 
 
-define('childrenClass',['FFF','parentClass'],function(FFF,ParentClass){
+define('childrenClass',['../src/core/FUI.js','parentClass'],function(FFF, ParentClass){
 	  var F = FFF.FFF,
         Widget = F.Widget; 
        var ParentClass = ParentClass.ParentClass
@@ -112,7 +112,7 @@ define('childrenClass',['FFF','parentClass'],function(FFF,ParentClass){
 });
 
 
-require(['FFF','childrenClass'], function(FFF,ChildrenClass) {
+require(['../src/core/FUI.js','childrenClass'], function(FFF, ChildrenClass) {
    var F = FFF.FFF;  
     QUnit.test('extend-ATTRS-继承方法', function(assert) {  
 

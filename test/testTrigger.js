@@ -1,7 +1,7 @@
 /**
  * Created by lb on 15/3/5.
  */
-define('testTrigger', ['FFF'], function(FFF) {
+define('testTrigger', ['../src/core/FUI.js'], function(FFF) {
     var F = FFF.FFF,
         Widget = F.Widget;
 

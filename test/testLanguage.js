@@ -1,4 +1,4 @@
-require(['FFF'],function (FFF) {
+require(['../src/core/FUI.js'],function (FFF) {
     var F= FFF.FFF;
     //type test
     QUnit.test('type方法测试', function(assert) {

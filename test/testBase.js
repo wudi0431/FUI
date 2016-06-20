@@ -1,7 +1,7 @@
 /**
  * Created by lb on 15/3/5.
  */
-define('baseTest', ['FFF', 'base'], function(FFF, base) {
+define('baseTest', ['../src/core/FUI.js', 'base'], function(FFF, base) {
     var F = FFF.FFF;
     var Base = base.Base;
 
@@ -24,7 +24,7 @@ define('baseTest', ['FFF', 'base'], function(FFF, base) {
 });
 
 
-define('myBaseTest', ['FFF', 'baseTest'], function(FFF, baseTest) {
+define('myBaseTest', ['../src/core/FUI.js', 'baseTest'], function(FFF, baseTest) {
     var F = FFF.FFF;
     var BaseTest = baseTest.BaseTest;
 
@@ -52,7 +52,7 @@ define('myBaseTest', ['FFF', 'baseTest'], function(FFF, baseTest) {
 
 /*===================================================================*/
 //子类无widthSync方法
-define('myBt', ['FFF', 'myBaseTest'], function(FFF, myBaseTest) {
+define('myBt', ['../src/core/FUI.js', 'myBaseTest'], function(FFF, myBaseTest) {
     var F = FFF.FFF;
     var MyBaseTest = myBaseTest.MyBaseTest;
 
@@ -104,7 +104,7 @@ require(['myBt'], function(myBt) {
 
 //子类有widthSync方法
 //不调用callParent
-define('myBt1', ['FFF', 'myBaseTest'], function(FFF, myBaseTest) {
+define('myBt1', ['../src/core/FUI.js', 'myBaseTest'], function(FFF, myBaseTest) {
     var F = FFF.FFF;
     var MyBaseTest = myBaseTest.MyBaseTest;
 
@@ -156,7 +156,7 @@ require(['myBt1'], function(myBt1) {
 
 //子类有widthSync方法
 //调用callParent
-define('myBt2', ['FFF', 'myBaseTest'], function(FFF, myBaseTest) {
+define('myBt2', ['../src/core/FUI.js', 'myBaseTest'], function(FFF, myBaseTest) {
     var F = FFF.FFF;
     var MyBaseTest = myBaseTest.MyBaseTest;
 
@@ -209,7 +209,7 @@ require(['myBt2'], function(myBt2) {
 
 /*===================================================================*/
 
-define('baseInitTest', ['FFF', 'base'], function(FFF, base) {
+define('baseInitTest', ['../src/core/FUI.js', 'base'], function(FFF, base) {
     var F = FFF.FFF;
     var Base = base.Base;
 

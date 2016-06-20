@@ -2,7 +2,7 @@
  * Created by lb on 15/3/5.
  */
 
-require(['FFF'], function(FFF) {
+require(['../src/core/FUI.js'], function(FFF) {
     var F = FFF.FFF;
 
     var receiver = {

@@ -1,7 +1,7 @@
 /**
  * Created by lb on 15/3/5.
  */
-define('testOn', ['FFF'], function(FFF) {
+define('testOn', ['../src/core/FUI.js'], function(FFF) {
     var F = FFF.FFF,
         Widget = F.Widget;
 
