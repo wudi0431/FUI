@@ -16,7 +16,7 @@ define(['zepto','FUI'], function($,FUI) {
         var $content = $page.hasClass('content') ?
             $page :
             $page.find('.content');
-        $content.scroller();  //注意滚动条一定要最先初始化
+       // $content.scroller();  //注意滚动条一定要最先初始化
 
         // FUI.initPullToRefresh($content);
         // FUI.initInfiniteScroll($content);
@@ -90,7 +90,6 @@ define(['zepto','FUI'], function($,FUI) {
     $(function() {
         //直接绑定
         //FastClick.attach(document.body);
-
         if (FUI.smConfig.autoInit) {
             FUI.init();
         }
