@@ -87,17 +87,17 @@ define(['zepto','FUI'], function($,FUI) {
     };
 
     //DOM READY
-    $(function() {
-        //直接绑定
-        //FastClick.attach(document.body);
-        if (FUI.smConfig.autoInit) {
-            FUI.init();
-        }
-
-        $(document).on('pageInitInternal', function(e, id, page) {
-            FUI.init();
-        });
-    });
+    // $(function() {
+    //     //直接绑定
+    //     //FastClick.attach(document.body);
+    //     if (FUI.smConfig.autoInit) {
+    //         FUI.init();
+    //     }
+    //
+    //     $(document).on('pageInitInternal', function(e, id, page) {
+    //         FUI.init();
+    //     });
+    // });
 
 
 })
