@@ -47,37 +47,37 @@ define(['zepto','FUI'], function($,FUI) {
         });
     }
 
-    $(window).on('pageAnimationStart', function(event,id,page) {
-        // 在路由切换页面动画开始前,为了把位于 .page 之外的 popup 等隐藏,此处做些处理
-        //FUI.closeModal();
-        //FUI.closePanel();
-        // 如果 panel 的 effect 是 reveal 时,似乎是 page 的动画或别的样式原因导致了 transitionEnd 时间不会触发
-        // 这里暂且处理一下
-        $('body').removeClass('panel-closing');
-        $.allowPanelOpen = true;
-    });
-
-    $(window).on('pageInit', function() {
-        //FUI.hideIndicator();
-        // FUI.lastPosition({
-        //     needMemoryClass: [
-        //         '.content'
-        //     ]
-        // });
-    });
-    // safari 在后退的时候会使用缓存技术，但实现上似乎存在些问题，
-    // 导致路由中绑定的点击事件不会正常如期的运行（log 和 debugger 都没法调试），
-    // 从而后续的跳转等完全乱了套。
-    // 所以，这里检测到是 safari 的 cache 的情况下，做一次 reload
-    // 测试路径(后缀 D 表示是 document，E 表示 external，不使用路由跳转）：
-    // 1. aD -> bDE
-    // 2. back
-    // 3. aD -> bD
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            location.reload();
-        }
-    });
+    // $(window).on('pageAnimationStart', function(event,id,page) {
+    //     // 在路由切换页面动画开始前,为了把位于 .page 之外的 popup 等隐藏,此处做些处理
+    //     //FUI.closeModal();
+    //     //FUI.closePanel();
+    //     // 如果 panel 的 effect 是 reveal 时,似乎是 page 的动画或别的样式原因导致了 transitionEnd 时间不会触发
+    //     // 这里暂且处理一下
+    //     $('body').removeClass('panel-closing');
+    //     $.allowPanelOpen = true;
+    // });
+    //
+    // $(window).on('pageInit', function() {
+    //     //FUI.hideIndicator();
+    //     // FUI.lastPosition({
+    //     //     needMemoryClass: [
+    //     //         '.content'
+    //     //     ]
+    //     // });
+    // });
+    // // safari 在后退的时候会使用缓存技术，但实现上似乎存在些问题，
+    // // 导致路由中绑定的点击事件不会正常如期的运行（log 和 debugger 都没法调试），
+    // // 从而后续的跳转等完全乱了套。
+    // // 所以，这里检测到是 safari 的 cache 的情况下，做一次 reload
+    // // 测试路径(后缀 D 表示是 document，E 表示 external，不使用路由跳转）：
+    // // 1. aD -> bDE
+    // // 2. back
+    // // 3. aD -> bD
+    // window.addEventListener('pageshow', function(event) {
+    //     if (event.persisted) {
+    //         location.reload();
+    //     }
+    // });
 
     FUI.init = function() {
         var $page = getPage();
